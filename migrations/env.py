@@ -33,6 +33,7 @@ def get_engine_url():
 
 
 # add your model's MetaData object here
+from models import Persona,Producto,Images
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
