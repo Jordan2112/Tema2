@@ -38,11 +38,15 @@ from database import db
 from config import BasicConfig
 from flask_migrate import Migrate
 import logging
-from routes.persona.personas import apppersona
 
+from routes.persona.personas import apppersona
+from routes.producto.producto import appproducto
+from routes.imagen.imagen import appImagen
 
 app= Flask(__name__)
 app.register_blueprint(apppersona)
+app.register_blueprint(appproducto)
+app.register_blueprint(appImagen)
 app.config.from_object(BasicConfig)
 db.init_app(app)
 migrate = Migrate()
